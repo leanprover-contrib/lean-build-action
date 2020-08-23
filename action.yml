@@ -1,0 +1,7 @@
+# action.yml
+name: 'build Lean project'
+description: 'builds the checked out Lean project using leanproject'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
