@@ -52,7 +52,7 @@ jobs:
         fetch-depth: 0
 
     - name: update branch
-      if: ${{ github.ref == 'ref/head/master' }}
+      if: github.ref == 'refs/heads/master'
       uses: leanprover-contrib/update-versions-action@master
 
     - name: build project
