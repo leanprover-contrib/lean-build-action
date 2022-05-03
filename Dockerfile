@@ -6,7 +6,7 @@ FROM python:3.8-buster
 COPY . /lean-build-action/
 
 RUN python -m pip install --upgrade pip mathlibtools
-RUN curl https://raw.githubusercontent.com/Kha/elan/master/elan-init.sh -sSf | sh -s -- -y
+RUN curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/lean-build-action/entrypoint.sh"]
